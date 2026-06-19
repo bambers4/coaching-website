@@ -22,11 +22,6 @@
   </nav>
 
   <!-- PAGE HEADER -->
-  <!--
-    Kept short and distinct from the home page hero.
-    Home page says "coaching built on real experience" — this page
-    opens with who Michael is, not a repeated coaching tagline.
-  -->
   <header class="page-header">
     <div class="container">
       <span class="section-label">Meet Your Coach</span>
@@ -39,15 +34,20 @@
 
     <!-- ============================================================
          INTRO SECTION
-         — Photo + sidebar cards on the left, full bio on the right.
-         — Highlights are folded into the bio column as a simple list
-           so there is no need for a separate section below.
+         — Left column: photo, name, then the two dark cards
+           side by side beneath it.
+           Right column: full bio and running story.
          ============================================================ -->
     <section class="section">
       <div class="container">
+
+        <!--
+          about-intro is a CSS grid: 1fr 2fr (narrow left, wide right).
+          The left column holds the photo + name + the two cards.
+        -->
         <div class="about-intro">
 
-          <!-- LEFT COLUMN: photo, name, quick facts, career highlights -->
+          <!-- LEFT COLUMN -->
           <div>
 
             <img
@@ -62,63 +62,81 @@
               <p class="coach-title">NCAA D1 Athlete &bull; Distance Runner &bull; Running Coach</p>
             </div>
 
-            <!-- Quick Facts card -->
-            <div class="quick-facts" style="margin-top: var(--space-md);">
-              <h3>Quick Facts</h3>
-              <ul>
-                <li>
-                  <span class="fact-label">School</span>
-                  <span class="fact-value">[Your University]</span>
-                </li>
-                <li>
-                  <span class="fact-label">Events</span>
-                  <span class="fact-value">[XC / 5K / 10K / Half]</span>
-                </li>
-                <li>
-                  <span class="fact-label">PRs</span>
-                  <span class="fact-value">[5K: X:XX | 10K: XX:XX]</span>
-                </li>
-                <li>
-                  <span class="fact-label">Experience</span>
-                  <span class="fact-value">13+ years running</span>
-                </li>
-                <li>
-                  <span class="fact-label">Coaching</span>
-                  <span class="fact-value">100% Online</span>
-                </li>
-              </ul>
-            </div>
-
             <!--
-              CAREER HIGHLIGHTS CARD
-              — Same dark style as Quick Facts so the two cards feel like
-                a matching pair. Add or remove <li> items freely.
+              TWO CARDS SIDE BY SIDE
+              — A simple two-column grid that only applies inside the
+                left column. Each card fills half the available width.
+              — On mobile the grid drops to a single column automatically
+                via the responsive rules already in styles.css.
             -->
-            <div class="quick-facts" style="margin-top: var(--space-md);">
-              <h3>Career Highlights</h3>
-              <ul>
-                <li>
-                  <span class="fact-label" style="min-width: unset; margin-right: var(--space-xs);">🏅</span>
-                  <span class="fact-value" style="text-align: left;">[Achievement — e.g. NCAA XC qualifier, 2023]</span>
-                </li>
-                <li>
-                  <span class="fact-label" style="min-width: unset; margin-right: var(--space-xs);">🏅</span>
-                  <span class="fact-value" style="text-align: left;">[Achievement — e.g. Conference All-Academic Team]</span>
-                </li>
-                <li>
-                  <span class="fact-label" style="min-width: unset; margin-right: var(--space-xs);">🏅</span>
-                  <span class="fact-value" style="text-align: left;">[Achievement — e.g. Top 10 at [Race Name], [Year]]</span>
-                </li>
-                <li>
-                  <span class="fact-label" style="min-width: unset; margin-right: var(--space-xs);">🏅</span>
-                  <span class="fact-value" style="text-align: left;">[Achievement — add or remove rows as needed]</span>
-                </li>
-              </ul>
-            </div>
+            <div style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: var(--space-sm);
+              margin-top: var(--space-md);
+            ">
+
+              <!-- Quick Facts card -->
+              <div class="quick-facts">
+                <h3>Quick Facts</h3>
+                <ul>
+                  <li>
+                    <span class="fact-label">School</span>
+                    <span class="fact-value">[Your University]</span>
+                  </li>
+                  <li>
+                    <span class="fact-label">Events</span>
+                    <span class="fact-value">[XC / 5K / 10K / Half]</span>
+                  </li>
+                  <li>
+                    <span class="fact-label">PRs</span>
+                    <span class="fact-value">[5K: X:XX | 10K: XX:XX]</span>
+                  </li>
+                  <li>
+                    <span class="fact-label">Experience</span>
+                    <span class="fact-value">13+ years running</span>
+                  </li>
+                  <li>
+                    <span class="fact-label">Coaching</span>
+                    <span class="fact-value">100% Online</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Career Highlights card — same dark style as Quick Facts -->
+              <div class="quick-facts">
+                <h3>Career Highlights</h3>
+                <ul>
+                  <li>
+                    <!--
+                      Each item is just a medal icon + the achievement text.
+                      fact-label and fact-value are not used here because
+                      these are single-column entries, not label/value pairs.
+                      The icon acts as a simple visual bullet.
+                    -->
+                    <span style="margin-right: 8px;">🏅</span>
+                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — e.g. NCAA XC qualifier, 2023]</span>
+                  </li>
+                  <li>
+                    <span style="margin-right: 8px;">🏅</span>
+                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — e.g. Conference All-Academic Team]</span>
+                  </li>
+                  <li>
+                    <span style="margin-right: 8px;">🏅</span>
+                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — e.g. Top 10 at [Race Name], [Year]]</span>
+                  </li>
+                  <li>
+                    <span style="margin-right: 8px;">🏅</span>
+                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — add or remove rows freely]</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div><!-- end two-card grid -->
 
           </div><!-- end left column -->
 
-          <!-- RIGHT COLUMN: bio + running story (highlights removed as separate section) -->
+          <!-- RIGHT COLUMN: bio + running story -->
           <div>
 
             <span class="section-label">Introduction</span>
@@ -137,7 +155,6 @@
               that actually fits their life and a coach who's genuinely invested in their progress.
             </p>
 
-            <!-- Running background — kept concise, no redundant section header needed -->
             <div style="margin-top: var(--space-lg);">
               <span class="section-label">Running Background</span>
               <h3>My Running Story</h3>
@@ -158,14 +175,10 @@
 
         </div><!-- end .about-intro -->
       </div>
-    </section><!-- end intro section -->
+    </section>
 
     <!-- ============================================================
          COACHING PHILOSOPHY
-         — "Why I Coach" is removed. The four philosophy points now
-           stand on their own. A max-width wrapper keeps the two-col
-           grid from stretching too wide with only 4 items, so the
-           left and right columns feel balanced.
          ============================================================ -->
     <section class="section section--light">
       <div class="container">
@@ -177,11 +190,6 @@
           <p>A few principles that guide everything I do as a coach.</p>
         </div>
 
-        <!--
-          max-width + auto margin keeps the 2x2 grid centered and
-          prevents it from looking stretched across the full container
-          now that it doesn't have a "Why I Coach" text column beside it.
-        -->
         <div class="two-col" style="max-width: 800px; margin: 0 auto;">
 
           <div>
@@ -222,17 +230,19 @@
         </div>
 
       </div>
-    </section><!-- end philosophy section -->
+    </section>
 
     <!-- ============================================================
          CTA BANNER
-         — btn-primary (solid red button) is used here because the
-           banner background is also red (cta-banner class). A white
-           outline button disappears against the red — btn-primary
-           uses a white background with red text on hover, which stays
-           clearly visible.
+         — padding-top increased to add white space between the gray
+           philosophy section and the "Want to work together?" heading.
+         — Button matches the home page hero "Start a Conversation"
+           style: solid red fill (btn-primary) on the red background
+           would disappear, so the home page button look is achieved
+           with a solid white background + accent text color, which
+           is exactly how it pops in the hero photo.
          ============================================================ -->
-    <section class="cta-banner">
+    <section class="cta-banner" style="padding-top: var(--space-xl);">
       <div class="container">
         <h2>Want to work together?</h2>
         <p>
@@ -240,10 +250,17 @@
           No pressure — just a conversation.
         </p>
         <!--
-          Button fix: switched from btn-outline (white border, invisible on red)
-          to a solid white button so it's clearly readable on the red background.
+          This button intentionally uses inline styles rather than a new
+          CSS class so no changes to styles.css are needed.
+          White background + red text = same visual pop as the hero button
+          on the home page, but inverted to stay readable on the red banner.
         -->
-        <a href="contact.html" class="btn" style="background-color: var(--color-white); color: var(--color-accent); border: 2px solid var(--color-white);">
+        <a href="contact.html" class="btn" style="
+          background-color: var(--color-white);
+          color: var(--color-accent);
+          border: 2px solid var(--color-white);
+          font-weight: bold;
+        ">
           Get in Touch
         </a>
       </div>
