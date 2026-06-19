@@ -188,10 +188,16 @@ p {
    ============================================================ */
 
 .hero {
-  background-color: var(--color-primary);
+  position: relative;
   color: var(--color-white);
-  padding: var(--space-xl) 0;
+  padding: 9rem 0;
   text-align: center;
+  background-image:
+    linear-gradient(rgba(15, 17, 36, 0.72), rgba(15, 17, 36, 0.72)),
+    url("assets/hero-running.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Small label above the main headline */
