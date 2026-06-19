@@ -34,111 +34,56 @@
 
     <!-- ============================================================
          INTRO SECTION
-         — Left column: photo, name, then the two dark cards
-           side by side beneath it.
-           Right column: full bio and running story.
+         — Three rows stacked:
+           Row 1: photo (smaller) left + bio text right
+           Row 2: name/title centered under the photo column
+           Row 3: quick facts + career highlights spanning full width
          ============================================================ -->
     <section class="section">
       <div class="container">
 
+        <!-- ROW 1: Photo + Bio side by side -->
         <!--
-          about-intro is a CSS grid: 1fr 2fr (narrow left, wide right).
-          The left column holds the photo + name + the two cards.
+          grid-template-columns: 280px 1fr
+          — fixes the photo column at 280px so it doesn't dominate.
+          — the bio column gets all remaining space, making text larger
+            relative to the photo.
         -->
-        <div class="about-intro">
+        <div style="
+          display: grid;
+          grid-template-columns: 280px 1fr;
+          gap: var(--space-xl);
+          align-items: start;
+        ">
 
-          <!-- LEFT COLUMN -->
+          <!-- Left: photo + name/title only -->
           <div>
-
+            <!--
+              max-width: 260px keeps the image from filling the full
+              280px column, giving it a little breathing room.
+            -->
             <img
               src="assets/coach-photo.jpg"
               alt="Michael Chambers, running coach"
-              class="coach-photo"
+              style="
+                width: 100%;
+                max-width: 260px;
+                border-radius: var(--border-radius-lg);
+                display: block;
+              "
             />
 
-            <!-- Name and title under photo -->
-            <div class="coach-identity">
-              <h2>Michael Chambers</h2>
-              <p class="coach-title">NCAA D1 Athlete &bull; Distance Runner &bull; Running Coach</p>
+            <!-- Name and title sit directly under the photo -->
+            <div style="margin-top: var(--space-sm); text-align: center;">
+              <h2 style="font-size: var(--font-size-xl);">Michael Chambers</h2>
+              <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">
+                NCAA D1 Athlete &bull; Distance Runner &bull; Running Coach
+              </p>
             </div>
+          </div>
 
-            <!--
-              TWO CARDS SIDE BY SIDE
-              — A simple two-column grid that only applies inside the
-                left column. Each card fills half the available width.
-              — On mobile the grid drops to a single column automatically
-                via the responsive rules already in styles.css.
-            -->
-            <div style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: var(--space-sm);
-              margin-top: var(--space-md);
-            ">
-
-              <!-- Quick Facts card -->
-              <div class="quick-facts">
-                <h3>Quick Facts</h3>
-                <ul>
-                  <li>
-                    <span class="fact-label">School</span>
-                    <span class="fact-value">[Your University]</span>
-                  </li>
-                  <li>
-                    <span class="fact-label">Events</span>
-                    <span class="fact-value">[XC / 5K / 10K / Half]</span>
-                  </li>
-                  <li>
-                    <span class="fact-label">PRs</span>
-                    <span class="fact-value">[5K: X:XX | 10K: XX:XX]</span>
-                  </li>
-                  <li>
-                    <span class="fact-label">Experience</span>
-                    <span class="fact-value">13+ years running</span>
-                  </li>
-                  <li>
-                    <span class="fact-label">Coaching</span>
-                    <span class="fact-value">100% Online</span>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Career Highlights card — same dark style as Quick Facts -->
-              <div class="quick-facts">
-                <h3>Career Highlights</h3>
-                <ul>
-                  <li>
-                    <!--
-                      Each item is just a medal icon + the achievement text.
-                      fact-label and fact-value are not used here because
-                      these are single-column entries, not label/value pairs.
-                      The icon acts as a simple visual bullet.
-                    -->
-                    <span style="margin-right: 8px;">🏅</span>
-                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — e.g. NCAA XC qualifier, 2023]</span>
-                  </li>
-                  <li>
-                    <span style="margin-right: 8px;">🏅</span>
-                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — e.g. Conference All-Academic Team]</span>
-                  </li>
-                  <li>
-                    <span style="margin-right: 8px;">🏅</span>
-                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — e.g. Top 10 at [Race Name], [Year]]</span>
-                  </li>
-                  <li>
-                    <span style="margin-right: 8px;">🏅</span>
-                    <span style="color: #c9d1d9; font-size: var(--font-size-sm);">[Achievement — add or remove rows freely]</span>
-                  </li>
-                </ul>
-              </div>
-
-            </div><!-- end two-card grid -->
-
-          </div><!-- end left column -->
-
-          <!-- RIGHT COLUMN: bio + running story -->
+          <!-- Right: bio text -->
           <div>
-
             <span class="section-label">Introduction</span>
             <h2>Hi, I'm Michael</h2>
             <hr class="divider divider--left" />
@@ -170,12 +115,91 @@
                 [One sentence about what running means to you now — why it still drives you.]
               </p>
             </div>
+          </div>
 
-          </div><!-- end right column -->
+        </div><!-- end photo + bio row -->
 
-        </div><!-- end .about-intro -->
+        <!-- ROW 2: Quick Facts + Career Highlights spanning full width -->
+        <!--
+          margin-top adds breathing room between the bio and the cards.
+          grid-template-columns: 1fr 1fr makes both cards exactly half
+          the full container width — much wider than being crammed under
+          the narrow photo column.
+          The cards use the same .quick-facts dark style as before.
+        -->
+        <div style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: var(--space-md);
+          margin-top: var(--space-xl);
+        ">
+
+          <!-- QUICK FACTS — full half width -->
+          <div class="quick-facts">
+            <h3>Quick Facts</h3>
+            <ul>
+              <li>
+                <span class="fact-label">School</span>
+                <span class="fact-value">[Your University]</span>
+              </li>
+              <li>
+                <span class="fact-label">Events</span>
+                <span class="fact-value">[XC / 5K / 10K / Half]</span>
+              </li>
+              <li>
+                <span class="fact-label">PRs</span>
+                <span class="fact-value">[5K: X:XX | 10K: XX:XX]</span>
+              </li>
+              <li>
+                <span class="fact-label">Experience</span>
+                <span class="fact-value">13+ years running</span>
+              </li>
+              <li>
+                <span class="fact-label">Coaching</span>
+                <span class="fact-value">100% Online</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CAREER HIGHLIGHTS — full half width -->
+          <div class="quick-facts">
+            <h3>Career Highlights</h3>
+            <ul>
+              <!--
+                Each item: medal icon on the left, achievement text on the right.
+                font-size is bumped slightly so the text fills the wider card.
+              -->
+              <li>
+                <span style="margin-right: 10px; flex-shrink: 0;">🏅</span>
+                <span style="color: #c9d1d9; font-size: var(--font-size-base);">
+                  [Achievement — e.g. NCAA XC qualifier, 2023]
+                </span>
+              </li>
+              <li>
+                <span style="margin-right: 10px; flex-shrink: 0;">🏅</span>
+                <span style="color: #c9d1d9; font-size: var(--font-size-base);">
+                  [Achievement — e.g. Conference All-Academic Team]
+                </span>
+              </li>
+              <li>
+                <span style="margin-right: 10px; flex-shrink: 0;">🏅</span>
+                <span style="color: #c9d1d9; font-size: var(--font-size-base);">
+                  [Achievement — e.g. Top 10 at [Race Name], [Year]]
+                </span>
+              </li>
+              <li>
+                <span style="margin-right: 10px; flex-shrink: 0;">🏅</span>
+                <span style="color: #c9d1d9; font-size: var(--font-size-base);">
+                  [Achievement — add or remove rows freely]
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </div><!-- end cards row -->
+
       </div>
-    </section>
+    </section><!-- end intro section -->
 
     <!-- ============================================================
          COACHING PHILOSOPHY
@@ -191,7 +215,6 @@
         </div>
 
         <div class="two-col" style="max-width: 800px; margin: 0 auto;">
-
           <div>
             <h3>Consistency beats intensity</h3>
             <p style="color: var(--color-text-muted);">
@@ -200,7 +223,6 @@
               hard workout.
             </p>
           </div>
-
           <div>
             <h3>The athlete always comes first</h3>
             <p style="color: var(--color-text-muted);">
@@ -209,7 +231,6 @@
               way around.
             </p>
           </div>
-
           <div>
             <h3>Progress takes patience</h3>
             <p style="color: var(--color-text-muted);">
@@ -218,7 +239,6 @@
               direction.
             </p>
           </div>
-
           <div>
             <h3>Communication matters</h3>
             <p style="color: var(--color-text-muted);">
@@ -226,7 +246,6 @@
               is going so we can make smart decisions together.
             </p>
           </div>
-
         </div>
 
       </div>
@@ -234,15 +253,14 @@
 
     <!-- ============================================================
          CTA BANNER
-         — padding-top increased to add white space between the gray
-           philosophy section and the "Want to work together?" heading.
-         — Button matches the home page hero "Start a Conversation"
-           style: solid red fill (btn-primary) on the red background
-           would disappear, so the home page button look is achieved
-           with a solid white background + accent text color, which
-           is exactly how it pops in the hero photo.
+         — padding-top and padding-bottom are set equally so the
+           button floats symmetrically between the gray section
+           above and the dark navy footer below.
+         — The button is a solid white pill with red text, identical
+           in weight and feel to the "Start a Conversation" button
+           on the home page hero.
          ============================================================ -->
-    <section class="cta-banner" style="padding-top: var(--space-xl);">
+    <section class="cta-banner" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
       <div class="container">
         <h2>Want to work together?</h2>
         <p>
@@ -250,16 +268,21 @@
           No pressure — just a conversation.
         </p>
         <!--
-          This button intentionally uses inline styles rather than a new
-          CSS class so no changes to styles.css are needed.
-          White background + red text = same visual pop as the hero button
-          on the home page, but inverted to stay readable on the red banner.
+          Button breakdown:
+          - background-color white  → solid filled look, same as home page btn-primary
+          - color accent red        → red text on white = matches home page palette
+          - border white            → seamless on the red banner background
+          - padding / border-radius → identical values to .btn in styles.css
+          - font-weight bold        → matches all other buttons on the site
         -->
         <a href="contact.html" class="btn" style="
           background-color: var(--color-white);
           color: var(--color-accent);
           border: 2px solid var(--color-white);
           font-weight: bold;
+          padding: 0.85rem 2rem;
+          border-radius: var(--border-radius);
+          display: inline-block;
         ">
           Get in Touch
         </a>
