@@ -1,277 +1,185 @@
-<file name="/projects/sandbox/index.html" language="plaintext" >
-<content>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael Chambers Running Coaching</title>
+  <title>[Your Name] Running Coach</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-       — Sticky bar at the top of every page.
-       The logo is an image. Nav links use class="active" on the
-       current page so that link gets the red underline.
-       ============================================================ -->
+  <!-- NAVIGATION -->
   <nav class="site-nav">
     <div class="container">
-
-      <!--
-        LOGO IMAGE
-        — Replace assets/logo.png with your real logo file.
-        — Keep the alt text updated to your name.
-        — If you don't have a logo yet, swap the <img> for plain text:
-              <a href="index.html" class="nav-logo-text">Michael Chambers Running</a>
-          and add this to styles.css: .nav-logo-text { color:#fff; font-family:var(--font-heading); font-size:var(--font-size-lg); font-weight:bold; }
-      -->
-      <a href="index.html">
-        <img
-          src="assets/logo.png"
-          alt="Michael Chambers Running Coaching"
-          class="nav-logo-img"
-        />
-      </a>
-
+      <a href="index.html" class="nav-logo">[Your Name] Running</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="coaching.html">Coaching</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-
     </div>
   </nav>
 
-
-  <!-- ============================================================
-       HERO BANNER
-       — Full-width photo with a dark overlay and centred text.
-       — The background image is set in styles.css on the .hero rule:
-             background-image: url('assets/hero-running.jpg');
-       — To change the photo, save your image as assets/hero-running.jpg
-         (or update the path in styles.css).
-       ============================================================ -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <div class="hero-content">
-
-        <!-- Small label above the headline — optional, easy to remove -->
-        <span class="hero-eyebrow">Online Running Coaching</span>
-
-        <h1>Online Running Coaching Built Around You</h1>
-
-        <p class="hero-subtitle">
-          Personalized training for runners who want to build consistency,
-          confidence, and long-term fitness — wherever you are.
-        </p>
-
-        <!-- Two call-to-action buttons -->
-        <div class="hero-buttons">
-          <a href="coaching.html" class="btn btn-primary">Explore Coaching</a>
-          <a href="contact.html" class="btn btn-outline">Start a Conversation</a>
-        </div>
-
-      </div>
+      <span class="hero-eyebrow">Running Coach &bull; [Your City]</span>
+      <h1>Personalized running coaching to help you confidently achieve your goals.</h1>
+      <p class="hero-subtitle">
+        Whether you're lacing up for the first time or chasing a new PR,
+        I'm here to help you run smarter, stay consistent, and enjoy the journey.
+      </p>
+      <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       MAIN CONTENT
-       ============================================================ -->
   <main>
 
-    <!-- ---- ONLINE COACHING SECTION ---- -->
-    <!--
-      This section makes it immediately clear that coaching is remote.
-      Visitors do not need to live near you.
-    -->
-    <section class="section">
-      <div class="container">
-
-        <div class="section-header">
-          <span class="section-label">100% Online</span>
-          <h2>Online Coaching, Personalized to Your Goals</h2>
-          <hr class="divider" />
-          <p>
-            Whether you are training for your first race, building consistency,
-            or chasing a faster time, coaching can be delivered entirely online —
-            with a personalized training plan, regular communication, and
-            adjustments based on your progress. You don't need to be local.
-          </p>
-        </div>
-
-        <!-- Three simple pillars — keep this short and scannable -->
-        <div class="three-col">
-
-          <div class="card">
-            <div class="card-icon">📋</div>
-            <h3>Your Plan</h3>
-            <p>
-              A weekly training schedule built around your goal, your schedule,
-              and your current fitness — not a generic template.
-            </p>
-          </div>
-
-          <div class="card card--featured">
-            <div class="card-icon">💬</div>
-            <h3>Ongoing Support</h3>
-            <p>
-              Regular check-ins, feedback on your runs, and adjustments when
-              life gets in the way. You'll never feel like you're training alone.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">📈</div>
-            <h3>Real Progress</h3>
-            <p>
-              Training that builds week by week so you arrive at race day
-              confident, healthy, and ready to run your best.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- end online coaching section -->
-
-
-    <!-- ---- WHO I COACH SECTION ---- -->
-    <section class="section section--light">
-      <div class="container">
-
-        <div class="section-header">
-          <span class="section-label">Who I Work With</span>
-          <h2>Built for runners at every level</h2>
-          <hr class="divider" />
-        </div>
-
-        <div class="two-col">
-
-          <!-- Left: short description + bullet list -->
-          <div>
-            <p>
-              I work with runners of all backgrounds and experience levels.
-              If you're motivated to improve and willing to be consistent,
-              we're a good fit — regardless of where you live.
-            </p>
-
-            <!-- Edit this list to match who you want to coach -->
-            <ul style="list-style: disc; padding-left: 1.25rem; color: var(--color-text-muted); line-height: 2.2;">
-              <li>Complete beginners running for the first time</li>
-              <li>Runners returning after a break or injury</li>
-              <li>5K and 10K athletes chasing a personal best</li>
-              <li>First-time half marathon and marathon runners</li>
-              <li>Anyone who wants to run consistently and feel good</li>
-            </ul>
-
-            <a href="coaching.html" class="btn btn-outline-dark" style="margin-top: var(--space-md);">
-              See Coaching Options
-            </a>
-          </div>
-
-          <!-- Right: simple quote / emphasis block -->
-          <div>
-            <blockquote style="
-              border-left: 4px solid var(--color-accent);
-              padding: var(--space-lg);
-              background-color: var(--color-white);
-              border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
-              margin: 0;
-            ">
-              <p style="
-                font-family: var(--font-heading);
-                font-size: var(--font-size-xl);
-                color: var(--color-primary);
-                line-height: 1.4;
-                margin-bottom: var(--space-sm);
-              ">
-                "The best training plan is one you can actually follow."
-              </p>
-              <p style="font-size: var(--font-size-sm); color: var(--color-text-muted); margin: 0;">
-                — [Your Name], Running Coach
-              </p>
-            </blockquote>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- end who I coach section -->
-
-
-    <!-- ---- MY APPROACH SECTION ---- -->
+    <!-- COACHING APPROACH SECTION -->
     <section class="section">
       <div class="container">
 
         <div class="section-header">
           <span class="section-label">My Approach</span>
-          <h2>Simple, consistent, sustainable</h2>
+          <h2>Coaching that fits your life</h2>
           <hr class="divider" />
           <p>
-            I keep training straightforward. The goal is to help you build
-            a habit you enjoy, run without getting hurt, and improve steadily
-            over time.
+            Training isn't one-size-fits-all. My approach is built around
+            understanding where you are, where you want to go, and building
+            a realistic plan to get you there.
           </p>
         </div>
 
-        <!-- Four short approach points in a two-column layout -->
-        <div class="two-col">
+        <div class="three-col">
 
-          <div>
-            <h3 style="margin-bottom: var(--space-xs);">Consistency over intensity</h3>
-            <p style="color: var(--color-text-muted);">
-              Showing up regularly matters more than any single hard workout.
-              We build habits first, then performance follows.
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Goal-Driven Plans</h3>
+            <p>
+              Every plan starts with your goal — whether that's finishing your
+              first 5K or qualifying for a marathon. We work backward from
+              the finish line.
             </p>
           </div>
 
-          <div>
-            <h3 style="margin-bottom: var(--space-xs);">Plans that fit real life</h3>
-            <p style="color: var(--color-text-muted);">
-              Training needs to work around your schedule, not the other way
-              around. If something changes, we adapt.
+          <div class="card card--featured">
+            <div class="card-icon">▪</div>
+            <h3>Structured Training</h3>
+            <p>
+              Weekly plans that build progressively, including easy runs, workouts,
+              long runs, and rest days — so you improve without burning out.
             </p>
           </div>
 
-          <div>
-            <h3 style="margin-bottom: var(--space-xs);">Communication that helps</h3>
-            <p style="color: var(--color-text-muted);">
-              You can always ask questions. I'll give you honest, clear answers
-              — not jargon-heavy explanations.
-            </p>
-          </div>
-
-          <div>
-            <h3 style="margin-bottom: var(--space-xs);">Long-term thinking</h3>
-            <p style="color: var(--color-text-muted);">
-              The goal isn't just your next race — it's building a running
-              practice you'll maintain for years to come.
+          <div class="card">
+            <div class="card-icon">💬</div>
+            <h3>Ongoing Support</h3>
+            <p>
+              You'll never train alone. Regular check-ins, feedback on your
+              runs, and adjustments when life gets in the way.
             </p>
           </div>
 
         </div>
-
-        <!-- Link to the About page for more -->
-        <p class="text-center" style="margin-top: var(--space-lg);">
-          <a href="about.html" class="btn btn-outline-dark">Learn More About Me</a>
-        </p>
-
       </div>
-    </section><!-- end approach section -->
+    </section>
 
+    <!-- WHO I HELP SECTION -->
+    <section class="section section--light">
+      <div class="container">
 
-    <!-- ---- CALL-TO-ACTION BANNER ---- -->
+        <div class="section-header">
+          <span class="section-label">Who I Work With</span>
+          <h2>Built for runners at every starting line</h2>
+          <hr class="divider" />
+        </div>
+
+        <div class="two-col">
+
+          <div>
+            <p>
+              I work with runners of all backgrounds and experience levels.
+              If you're motivated to improve and willing to put in the work,
+              we're a good fit.
+            </p>
+            <ul style="padding-left: 1.25rem; list-style: disc; color: var(--color-text-muted); line-height: 2;">
+              <li>Complete beginners who have never run before</li>
+              <li>Runners returning after a break or injury</li>
+              <li>5K and 10K racers chasing a personal best</li>
+              <li>First-time half marathon and marathon runners</li>
+              <li>High school or college athletes looking for structure</li>
+              <li>Anyone who wants to run consistently and feel good doing it</li>
+            </ul>
+            <a href="coaching.html" class="btn btn-outline-dark" style="margin-top: var(--space-md);">
+              See Coaching Options
+            </a>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+
+            <div class="card" style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: bold; color: var(--color-accent);">[#]</div>
+              <p style="margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm);">Years running competitively</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: bold; color: var(--color-accent);">[#]+</div>
+              <p style="margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm);">Races completed</p>
+            </div>
+
+            <div class="card" style="text-align: center;">
+              <div style="font-size: 2.5rem; font-weight: bold; color: var(--color-accent);">100%</div>
+              <p style="margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm);">Committed to your progress</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW SECTION -->
+    <section class="section section--dark">
+      <div class="container">
+
+        <div class="two-col" style="align-items: center;">
+
+          <div>
+            <span class="section-label">A Little About Me</span>
+            <h2 style="color: var(--color-white);">Coaching built on real experience</h2>
+            <hr class="divider divider--left" />
+            <p>
+              I'm [Your Name], a [student / athlete / coach] based in [Your City].
+              I've been running since [year] and have competed in everything from
+              local 5Ks to [half marathons / marathons / etc.].
+            </p>
+            <p>
+              My coaching approach is shaped by my own journey — the good training
+              blocks, the setbacks, and everything I've learned along the way.
+            </p>
+            <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+          </div>
+
+          <div style="text-align: center;">
+            <!-- Replace this div with an <img> tag when you have a photo -->
+            <div class="coach-photo-placeholder" style="max-width: 320px; margin: 0 auto; background-color: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.4);">
+              📷 Add your photo here<br /><br />
+              <small>Replace this block with an &lt;img> tag</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CALL-TO-ACTION -->
     <section class="cta-banner">
       <div class="container">
-        <h2>Ready to start?</h2>
+        <h2>Ready to start running toward your goal?</h2>
         <p>
-          Reach out and let's have a quick conversation about your goals.
-          No commitment — just a chat.
+          Reach out and let's talk about where you are and where you want to go.
+          No pressure — just a conversation.
         </p>
         <a href="contact.html" class="btn btn-outline">Start a Conversation</a>
       </div>
@@ -279,29 +187,14 @@
 
   </main>
 
-
-  <!-- ============================================================
-       FOOTER — same on every page
-       ============================================================ -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-
         <div class="footer-brand">
-          <!--
-            FOOTER LOGO — same image as the nav logo.
-            Replace assets/logo.png with your real logo file.
-          -->
-          <a href="index.html">
-            <img
-              src="assets/logo.png"
-              alt="Michael Chambers Running Coaching"
-              class="footer-logo-img"
-            />
-          </a>
-          <p>Online running coaching for every level.</p>
+          <a href="index.html" class="nav-logo">[Your Name] Running</a>
+          <p>Personalized running coaching for every level.</p>
         </div>
-
         <div class="footer-links">
           <h4>Pages</h4>
           <ul>
@@ -311,26 +204,20 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-links">
-          <h4>Contact</h4>
+          <h4>Get in Touch</h4>
           <ul>
-            <!-- Replace with your real email and social handle -->
             <li><a href="mailto:[your@email.com]">[your@email.com]</a></li>
-            <li><a href="https://instagram.com/[YourHandle]" target="_blank" rel="noopener">@[YourHandle]</a></li>
-            <li><span>[Your City, State]</span></li>
+            <li><a href="#">@[YourInstagram]</a></li>
+            <li><span style="color: #6b7280;">[Your City, State]</span></li>
           </ul>
         </div>
-
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Michael Chambers Running. All rights reserved.</p>
+        <p>&copy; 2025 [Your Name] Running. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
 </body>
 </html>
-
-</content>
-</file>
