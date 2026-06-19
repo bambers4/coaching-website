@@ -1,17 +1,27 @@
+<file name="/projects/sandbox/contact.html" language="plaintext" >
+<content>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — [Your Name] Running Coach</title>
+  <title>Contact — Michael Chambers Running Coaching</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ============================================================
+       NAVIGATION — class="active" on the Contact link
+       ============================================================ -->
   <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">[Your Name] Running</a>
+      <a href="index.html">
+        <img
+          src="assets/logo.png"
+          alt="Michael Chambers Running Coaching"
+          class="nav-logo-img"
+        />
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -21,37 +31,45 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
+
+  <!-- ============================================================
+       PAGE HEADER
+       ============================================================ -->
   <header class="page-header">
     <div class="container">
-      <span class="section-label">Let's Talk</span>
-      <h1>Get in Touch</h1>
+      <span class="section-label">Online Coaching</span>
+      <h1>Start a Conversation</h1>
       <p>
-        Have a question or ready to start? I'd love to hear from you.
-        Reach out and let's figure out if we're a good fit.
+        Reach out and tell me a little about your goals.
+        No commitment — just a friendly first conversation.
       </p>
     </div>
   </header>
 
+
   <main>
 
-    <!-- CONTACT INFO TILES -->
+    <!-- ============================================================
+         CONTACT INFO TILES
+         ============================================================ -->
     <section class="section">
       <div class="container">
 
+        <!-- Three tiles: email, social, location -->
+        <!-- Replace each placeholder with your real details -->
         <div class="contact-info-grid">
 
           <div class="contact-info-item">
             <div class="info-icon">✉️</div>
             <h4>Email</h4>
-            <!-- Replace with your real email address -->
+            <!-- Replace [your@email.com] with your real address -->
             <p><a href="mailto:[your@email.com]">[your@email.com]</a></p>
           </div>
 
           <div class="contact-info-item">
             <div class="info-icon">📱</div>
-            <h4>Instagram / Social</h4>
-            <!-- Replace @[YourHandle] and update the href link -->
+            <h4>Instagram</h4>
+            <!-- Replace [YourHandle] with your real handle -->
             <p>
               <a href="https://instagram.com/[YourHandle]" target="_blank" rel="noopener">
                 @[YourHandle]
@@ -60,44 +78,58 @@
           </div>
 
           <div class="contact-info-item">
-            <div class="info-icon">📍</div>
-            <h4>Location</h4>
-            <!-- Replace with your city and state -->
-            <p>[Your City, State]</p>
+            <div class="info-icon">🌍</div>
+            <h4>Coaching Area</h4>
+            <!-- Online coaching = no location needed, but you can add your city -->
+            <p>Available online — anywhere</p>
           </div>
 
-        </div>
+        </div><!-- end .contact-info-grid -->
 
-        <!-- ======================================================
+
+        <!-- ============================================================
              CONTACT FORM
 
-             ⚠️  IMPORTANT: This form is VISUAL ONLY.
-             It does not send emails or store any data right now.
+             ⚠️  THIS FORM IS VISUAL ONLY — IT DOES NOT SEND ANYTHING YET.
+             ---------------------------------------------------------------
+             To make this form actually send messages, you need to connect
+             it to a form service. Two easy free options:
 
-             To make it work, you have two easy options:
-               1. Formspree (free): Go to https://formspree.io,
-                  create an account, get your form URL, and replace
-                  action="#" below with your Formspree URL.
-               2. Netlify Forms (free if hosted on Netlify):
-                  Add the word "netlify" inside the <form> tag.
+             Option 1 — Formspree (recommended for beginners):
+               1. Go to https://formspree.io and create a free account.
+               2. Create a new form — you'll get a unique URL like:
+                  https://formspree.io/f/abcdefgh
+               3. Replace action="#" on the <form> tag below with that URL.
+               4. Delete the ⚠️ reminder note at the bottom of the form.
 
-             Until then, direct people to your email address.
-             ====================================================== -->
+             Option 2 — Netlify Forms (if you host on Netlify):
+               1. Add the attribute netlify to the <form> tag: <form netlify>
+               2. That's it — Netlify captures submissions automatically.
+
+             Until one of these is set up, direct people to your email address.
+             ============================================================ -->
 
         <div class="contact-form-card">
 
+          <!-- Form heading -->
           <div style="margin-bottom: var(--space-lg);">
             <span class="section-label">Send a Message</span>
-            <h2 style="font-size: var(--font-size-xl);">Tell me about your goals</h2>
+            <h2 style="font-size: var(--font-size-xl);">
+              Start a Conversation About Online Coaching
+            </h2>
             <hr class="divider divider--left" />
             <p style="color: var(--color-text-muted);">
-              Fill out the form below and I'll get back to you as soon as I can.
+              Fill in the form below and I'll get back to you within a day or two.
               Or email me directly at
               <a href="mailto:[your@email.com]">[your@email.com]</a>.
             </p>
           </div>
 
-          <!-- action="#" means the form does nothing when submitted yet -->
+          <!--
+            FORM — action="#" means nothing happens when submitted yet.
+            Replace "#" with your Formspree URL when you're ready.
+            See the note above for instructions.
+          -->
           <form action="#" method="POST">
 
             <!-- Name -->
@@ -124,9 +156,10 @@
               />
             </div>
 
-            <!-- Running Goal dropdown -->
+            <!-- Running goal -->
             <div class="form-group">
               <label for="goal">What's your running goal?</label>
+              <!-- Edit the options to match your coaching offerings -->
               <select id="goal" name="goal">
                 <option value="" disabled selected>Select your goal</option>
                 <option value="beginner">I'm a complete beginner — just getting started</option>
@@ -140,40 +173,48 @@
 
             <!-- Message -->
             <div class="form-group">
-              <label for="message">Anything else you'd like to share?</label>
+              <label for="message">Tell me a little more (optional)</label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Tell me where you're starting from, what you've tried before, or anything else that feels relevant."
+                placeholder="Where are you starting from? Any upcoming races? How many days a week can you train? Even a sentence or two is helpful."
               ></textarea>
-              <p class="form-note">Optional but helpful. No right or wrong answer.</p>
+              <p class="form-note">No right or wrong answer — just share what feels relevant.</p>
             </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn--full">
               Send Message
             </button>
 
-            <!-- Reminder that the form isn't connected yet -->
+            <!--
+              ⚠️ REMINDER: This form does not send anything yet.
+              Connect it to Formspree or Netlify Forms first.
+              See the comment above the <form> tag for step-by-step instructions.
+              In the meantime, your email address is your best contact method.
+            -->
             <p class="form-note" style="margin-top: var(--space-sm); text-align: center;">
-              ⚠️ This form is not yet connected. To reach me directly, email
-              <a href="mailto:[your@email.com]">[your@email.com]</a>.
+              ⚠️ Form not yet connected. Email me directly:
+              <a href="mailto:[your@email.com]">[your@email.com]</a>
             </p>
 
           </form>
 
-        </div><!-- end contact-form-card -->
+        </div><!-- end .contact-form-card -->
 
       </div>
-    </section>
+    </section><!-- end contact section -->
 
-    <!-- EXTRA INFO SECTION -->
+
+    <!-- ============================================================
+         GOOD TO KNOW — short info section below the form
+         ============================================================ -->
     <section class="section section--light">
       <div class="container">
 
         <div class="section-header">
-          <span class="section-label">Good to Know</span>
-          <h2>Before you reach out</h2>
+          <span class="section-label">Before You Reach Out</span>
+          <h2>A few things to know</h2>
           <hr class="divider" />
         </div>
 
@@ -183,45 +224,49 @@
             <div class="card-icon">⏱️</div>
             <h3>Response Time</h3>
             <p>
-              I try to respond to all messages within [1–2 business days].
-              During busy training periods it may take a little longer.
+              I typically respond within [1–2 business days]. During busy
+              training periods it may take a little longer.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🌍</div>
+            <h3>Fully Remote</h3>
+            <p>
+              All coaching is done online. You don't need to be in the same
+              city — or even the same country. If you have internet, we can
+              work together.
             </p>
           </div>
 
           <div class="card">
             <div class="card-icon">🤝</div>
-            <h3>No Pressure</h3>
+            <h3>No Commitment</h3>
             <p>
-              Reaching out doesn't commit you to anything. It's just a conversation
-              to see if we're a good fit. If I can't help, I'll point you in the
-              right direction.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">▪</div>
-            <h3>What to Bring</h3>
-            <p>
-              It helps to know your current weekly mileage (even if it's zero),
-              any upcoming races you're targeting, and how many days per week
-              you can train.
+              Reaching out doesn't lock you into anything. It's just a
+              conversation to see if we're a good fit. No pressure at all.
             </p>
           </div>
 
         </div>
 
       </div>
-    </section>
+    </section><!-- end good to know section -->
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">[Your Name] Running</a>
-          <p>Personalized running coaching for every level.</p>
+          <a href="index.html">
+            <img src="assets/logo.png" alt="Michael Chambers Running Coaching" class="footer-logo-img" />
+          </a>
+          <p>Online running coaching for every level.</p>
         </div>
         <div class="footer-links">
           <h4>Pages</h4>
@@ -233,19 +278,22 @@
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Get in Touch</h4>
+          <h4>Contact</h4>
           <ul>
             <li><a href="mailto:[your@email.com]">[your@email.com]</a></li>
-            <li><a href="#">@[YourInstagram]</a></li>
-            <li><span style="color: #6b7280;">[Your City, State]</span></li>
+            <li><a href="https://instagram.com/[YourHandle]" target="_blank" rel="noopener">@[YourHandle]</a></li>
+            <li><span>[Your City, State]</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 [Your Name] Running. All rights reserved.</p>
+        <p>&copy; 2025 Michael Chambers Running. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
 </body>
 </html>
+
+</content>
+</file>

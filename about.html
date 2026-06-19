@@ -1,17 +1,27 @@
+<file name="/projects/sandbox/about.html" language="plaintext" >
+<content>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — [Your Name] Running Coach</title>
+  <title>About — Michael Chambers Running Coaching</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ============================================================
+       NAVIGATION — class="active" on the About link
+       ============================================================ -->
   <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">[Your Name] Running</a>
+      <a href="index.html">
+        <img
+          src="assets/logo.png"
+          alt="Michael Chambers Running Coaching"
+          class="nav-logo-img"
+        />
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
@@ -21,38 +31,58 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
+
+  <!-- ============================================================
+       PAGE HEADER
+       ============================================================ -->
   <header class="page-header">
     <div class="container">
       <span class="section-label">Meet Your Coach</span>
       <h1>Coaching built upon experience</h1>
-      <p>Honest, personal, and rooted in a genuine love for the sport.</p>
+      <p>Personal, honest, and rooted in a genuine love for the sport.</p>
     </div>
   </header>
 
+
   <main>
 
-    <!-- COACH INTRO SECTION -->
+    <!-- ============================================================
+         COACH INTRO — photo left, bio right
+         ============================================================ -->
     <section class="section">
       <div class="container">
         <div class="about-intro">
 
-          <!-- Left column: photo, name, quick facts -->
+          <!-- Left column: photo + name card + quick facts -->
           <div>
 
             <!--
-              PHOTO PLACEHOLDER
-              When you have a photo, replace this entire div with:
-              <img src="your-photo.jpg" alt="[Your Name]" style="border-radius: 16px; width: 100%;" />
+              COACH PHOTO
+              — Save your photo as: assets/coach-photo.jpg
+              — The .coach-photo class in styles.css handles the border-radius
+                and responsive sizing. No extra inline styles needed.
+              — If you don't have a photo yet, delete the <img> line and
+                uncomment the placeholder div below.
             -->
-            <div class="coach-photo-placeholder">
-              📷<br /><br />
-              Add your photo here.<br /><br />
-              <small>Replace this div with an <img&gt; tag.</small>
-            </div>
+            <img
+              src="assets/coach-photo.jpg"
+              alt="[Your Name], running coach"
+              class="coach-photo"
+            />
 
-            <!-- Name and title -->
-            <div class="coach-identity" style="margin-top: var(--space-md);">
+            <!--
+              PLACEHOLDER (remove once you add a real photo):
+              <div style="
+                width:100%; aspect-ratio:3/4; max-width:340px;
+                background:var(--color-border); border-radius:var(--border-radius-lg);
+                display:flex; align-items:center; justify-content:center;
+                color:var(--color-text-muted); font-size:var(--font-size-sm);
+                text-align:center; border:2px dashed var(--color-border);
+              ">📷 Add assets/coach-photo.jpg</div>
+            -->
+
+            <!-- Name and title under photo -->
+            <div class="coach-identity">
               <h2>[Your Name]</h2>
               <p class="coach-title">Student Runner &bull; Aspiring Coach &bull; Distance Athlete</p>
             </div>
@@ -67,41 +97,44 @@
                 </li>
                 <li>
                   <span class="fact-label">Events</span>
-                  <span class="fact-value">[5K / 10K / Half / Full Marathon]</span>
+                  <span class="fact-value">[5K / 10K / Half / Marathon]</span>
                 </li>
                 <li>
                   <span class="fact-label">PRs</span>
+                  <!-- Example: 5K: 19:42 | Half: 1:32:10 -->
                   <span class="fact-value">[5K: X:XX | 10K: XX:XX]</span>
                 </li>
                 <li>
                   <span class="fact-label">Focus</span>
-                  <span class="fact-value">[Beginner runners / Distance athletes]</span>
+                  <span class="fact-value">[Beginner / Distance athletes]</span>
                 </li>
                 <li>
-                  <span class="fact-label">Location</span>
-                  <span class="fact-value">[Your City, State]</span>
+                  <span class="fact-label">Coaching</span>
+                  <span class="fact-value">100% Online</span>
                 </li>
               </ul>
             </div>
 
           </div><!-- end left column -->
 
-          <!-- Right column: bio -->
+
+          <!-- Right column: written bio -->
           <div>
 
+            <!-- Introduction -->
             <span class="section-label">Introduction</span>
             <h2>Hi, I'm [Your Name]</h2>
             <hr class="divider divider--left" />
             <p>
-              [Write 2–3 sentences introducing yourself. Who are you? Where are you from?
-              What do you study? Example: I'm a sophomore at [University] studying [Major].
-              I've been a competitive distance runner since high school and recently
-              discovered a passion for helping other runners reach their goals.]
+              [2–3 sentences introducing yourself. Who are you? Where are you from?
+              What do you study? Example: I'm a sophomore at [University] studying
+              [Major]. I've been a competitive distance runner since high school and
+              recently discovered a passion for helping other runners reach their goals.]
             </p>
             <p>
-              [One more sentence about your values or personality.
-              Example: I believe running is for everyone — you just need the right support
-              and a plan that actually fits your life.]
+              [One sentence about your values or coaching style.
+              Example: I believe running is for everyone — you just need the right
+              support and a plan that actually fits your life.]
             </p>
 
             <!-- Running background -->
@@ -110,24 +143,26 @@
               <h3>My Running Story</h3>
               <hr class="divider divider--left" />
               <p>
-                [Tell visitors how you got into running. When did you start? What races
-                or teams have you been part of? Example: I started running track in 8th
-                grade almost by accident. By sophomore year I was running varsity cross
-                country and logging 50-mile weeks.]
+                [How did you get into running? What races or teams have you been part of?
+                Example: I started running track in 8th grade and by sophomore year I was
+                running varsity cross country. Since then I've raced everything from local
+                5Ks to [half marathons / marathons].]
               </p>
               <p>
-                [Add a second paragraph about recent races, training experiences,
-                or milestones.]
+                [One more sentence about recent experience or a meaningful training moment.]
               </p>
             </div>
 
           </div><!-- end right column -->
 
-        </div>
+        </div><!-- end .about-intro -->
       </div>
-    </section>
+    </section><!-- end intro section -->
 
-    <!-- COACHING PHILOSOPHY SECTION -->
+
+    <!-- ============================================================
+         COACHING PHILOSOPHY
+         ============================================================ -->
     <section class="section section--light">
       <div class="container">
 
@@ -135,89 +170,111 @@
           <span class="section-label">What I Believe</span>
           <h2>My Coaching Philosophy</h2>
           <hr class="divider" />
-          <p>Every runner deserves a coach who listens. Here's what guides everything I do.</p>
+          <p>A few principles that guide everything I do as a coach.</p>
         </div>
 
         <div class="two-col">
           <div>
-            <h3>Training should be sustainable</h3>
-            <p>
-              [Write about your view on training. Example: I believe the best training
-              plan is one you can actually stick to. Consistency beats perfection every
-              single time.]
+            <h3>Consistency beats intensity</h3>
+            <p style="color: var(--color-text-muted);">
+              [Your view on sustainable training. Example: The best training plan
+              is one you can actually stick to. Showing up consistently over weeks
+              and months matters far more than any single hard workout.]
             </p>
-            <p>[Add a supporting sentence from your own experience.]</p>
           </div>
           <div>
             <h3>The athlete always comes first</h3>
-            <p>
-              [Write about putting the individual runner's needs first. Example: Every
-              athlete I work with has different goals and a different schedule. I don't
-              believe in cookie-cutter plans.]
+            <p style="color: var(--color-text-muted);">
+              [Your view on individual focus. Example: Every runner I work with
+              has different goals, a different schedule, and a different body.
+              Plans get adjusted to fit you — not the other way around.]
             </p>
-            <p>[Continue with a sentence about flexibility and communication.]</p>
+          </div>
+          <div>
+            <h3>Progress takes patience</h3>
+            <p style="color: var(--color-text-muted);">
+              [Your view on long-term development. Example: Building real fitness
+              takes time, and that's okay. We celebrate small wins along the way
+              because each one is a step in the right direction.]
+            </p>
+          </div>
+          <div>
+            <h3>Communication matters</h3>
+            <p style="color: var(--color-text-muted);">
+              [Your view on staying in touch. Example: Good coaching is a
+              two-way conversation. I want to hear how training is going so
+              we can make smart decisions together.]
+            </p>
           </div>
         </div>
 
       </div>
-    </section>
+    </section><!-- end philosophy section -->
 
-    <!-- WHY I COACH SECTION -->
+
+    <!-- ============================================================
+         WHY I COACH
+         ============================================================ -->
     <section class="section">
       <div class="container">
 
         <div class="two-col" style="align-items: center;">
 
+          <!-- Left: text -->
           <div>
             <span class="section-label">My Motivation</span>
             <h2>Why I Coach</h2>
             <hr class="divider divider--left" />
             <p>
-              [Be honest and personal here. Example: I started coaching because I
-              remember how lost I felt as a new runner — no one told me about easy days,
-              or how to build mileage safely, or that it was okay to walk.]
+              [Be honest and personal here. Example: I started coaching because
+              I remember how lost I felt as a new runner. Nobody told me what an
+              easy run actually felt like, how to build mileage safely, or that
+              rest days mattered just as much as workout days.]
             </p>
             <p>
-              [One more sentence about what drives you. Example: Watching someone cross
-              a finish line for the first time, knowing you helped them get there, is
-              something I don't take for granted.]
+              [One more sentence about what drives you. Example: Watching
+              someone cross a finish line for the first time — knowing you
+              helped them get there — is something I don't take for granted.]
             </p>
+            <a href="contact.html" class="btn btn-outline-dark" style="margin-top: var(--space-sm);">
+              Get in Touch
+            </a>
           </div>
 
+          <!-- Right: values grid -->
           <div class="values-grid">
-
             <div class="value-item">
               <h4>Patience</h4>
-              <p>Progress takes time. I'll be there for every step of your journey.</p>
+              <p>Progress takes time. I'll be there for every step.</p>
             </div>
-
             <div class="value-item">
               <h4>Honesty</h4>
-              <p>You'll always get straight feedback — no sugarcoating, no fluff.</p>
+              <p>You'll always get straight feedback — no sugarcoating.</p>
             </div>
-
             <div class="value-item">
               <h4>Encouragement</h4>
-              <p>Celebrating small wins matters just as much as big ones.</p>
+              <p>Small wins matter just as much as big race days.</p>
             </div>
-
             <div class="value-item">
               <h4>Adaptability</h4>
-              <p>Life happens. Plans change. Good coaching rolls with it.</p>
+              <p>Life happens. Good coaching rolls with it.</p>
             </div>
-
           </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- ACHIEVEMENTS SECTION -->
+      </div>
+    </section><!-- end why I coach section -->
+
+
+    <!-- ============================================================
+         A FEW HIGHLIGHTS (optional — fill in or remove)
+         ============================================================ -->
     <section class="section section--light">
       <div class="container">
 
         <div class="section-header">
-          <span class="section-label">Experience &amp; Highlights</span>
+          <span class="section-label">Background</span>
           <h2>A Few Highlights</h2>
           <hr class="divider" />
         </div>
@@ -227,47 +284,62 @@
           <div class="card">
             <div class="card-icon">🏆</div>
             <h3>[Achievement One]</h3>
-            <p>[Describe the achievement. Example: Competed at the regional cross country
-            championships, finishing in the top 20 as a junior.]</p>
+            <p>
+              [Example: Competed at the regional cross country championships,
+              finishing in the top 20 as a junior.]
+            </p>
           </div>
 
           <div class="card">
             <div class="card-icon">🎓</div>
             <h3>[Achievement Two]</h3>
-            <p>[Example: Completed a running coaching certification through
-            [Organization] in [Year].]</p>
+            <p>
+              [Example: Completed a running coaching certification through
+              [Organization] in [Year].]
+            </p>
           </div>
 
           <div class="card">
             <div class="card-icon">📍</div>
             <h3>[Achievement Three]</h3>
-            <p>[Example: Volunteered as an assistant coach for [School / Club]'s
-            junior running program in [Year].]</p>
+            <p>
+              [Example: Volunteered as an assistant coach for [School or Club]'s
+              junior running program.]
+            </p>
           </div>
 
         </div>
 
       </div>
-    </section>
+    </section><!-- end highlights section -->
 
-    <!-- CALL-TO-ACTION BANNER -->
+
+    <!-- ---- CTA BANNER ---- -->
     <section class="cta-banner">
       <div class="container">
         <h2>Want to work together?</h2>
-        <p>I'd love to hear about your goals. Send me a message and let's figure out if we're a good fit.</p>
+        <p>
+          Send me a message and let's figure out if we're a good fit.
+          No pressure — just a conversation.
+        </p>
         <a href="contact.html" class="btn btn-outline">Get in Touch</a>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">[Your Name] Running</a>
-          <p>Personalized running coaching for every level.</p>
+          <a href="index.html">
+            <img src="assets/logo.png" alt="Michael Chambers Running Coaching" class="footer-logo-img" />
+          </a>
+          <p>Online running coaching for every level.</p>
         </div>
         <div class="footer-links">
           <h4>Pages</h4>
@@ -279,19 +351,22 @@
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Get in Touch</h4>
+          <h4>Contact</h4>
           <ul>
             <li><a href="mailto:[your@email.com]">[your@email.com]</a></li>
-            <li><a href="#">@[YourInstagram]</a></li>
-            <li><span style="color: #6b7280;">[Your City, State]</span></li>
+            <li><a href="https://instagram.com/[YourHandle]" target="_blank" rel="noopener">@[YourHandle]</a></li>
+            <li><span>[Your City, State]</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 [Your Name] Running. All rights reserved.</p>
+        <p>&copy; 2025 Michael Chambers Running. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
 </body>
 </html>
+
+</content>
+</file>

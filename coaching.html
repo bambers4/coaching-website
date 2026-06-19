@@ -1,17 +1,27 @@
+<file name="/projects/sandbox/coaching.html" language="plaintext" >
+<content>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coaching — [Your Name] Running Coach</title>
+  <title>Coaching — Michael Chambers Running Coaching</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ============================================================
+       NAVIGATION — class="active" on the Coaching link
+       ============================================================ -->
   <nav class="site-nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">[Your Name] Running</a>
+      <a href="index.html">
+        <img
+          src="assets/logo.png"
+          alt="Michael Chambers Running Coaching"
+          class="nav-logo-img"
+        />
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -21,134 +31,296 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
+
+  <!-- ============================================================
+       PAGE HEADER
+       ============================================================ -->
   <header class="page-header">
     <div class="container">
       <span class="section-label">Work With Me</span>
-      <h1>Coaching Services</h1>
+      <h1>Online Coaching Services</h1>
       <p>
-        Structured, personalized training built around your goals,
-        your schedule, and your current fitness.
+        Personalized, remote training for runners at every level —
+        no matter where you are.
       </p>
     </div>
   </header>
 
+
   <main>
 
-    <!-- COACHING INTRO -->
+    <!-- ============================================================
+         HOW ONLINE COACHING WORKS
+         — Four clear steps so visitors immediately understand the process
+         ============================================================ -->
     <section class="section">
       <div class="container">
+
         <div class="section-header">
-          <span class="section-label">What's Available</span>
+          <span class="section-label">The Process</span>
+          <h2>How online coaching works</h2>
+          <hr class="divider" />
+          <p>
+            Everything is done remotely. You don't need to be local.
+            Here's what working together looks like from start to finish.
+          </p>
+        </div>
+
+        <!-- Four numbered steps in a row — stacks to 2 columns on tablet, 1 on mobile -->
+        <div class="process-steps">
+
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h4>Initial Conversation</h4>
+            <p>
+              We start with a short message or call about your goals,
+              current fitness, schedule, and what's worked for you before.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h4>Personalized Training Plan</h4>
+            <p>
+              I build a plan tailored to your goal, your available days,
+              and your current fitness — not a generic template.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h4>Weekly Feedback</h4>
+            <p>
+              You train, I stay available. Regular check-ins, feedback on
+              your runs, and plan adjustments whenever life changes.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h4>Race Preparation</h4>
+            <p>
+              As your goal race approaches, we dial in the taper, race pace,
+              and race-day strategy so you arrive ready to run well.
+            </p>
+          </div>
+
+        </div><!-- end .process-steps -->
+
+      </div>
+    </section><!-- end how it works section -->
+
+
+    <!-- ============================================================
+         SERVICE CARDS — three coaching options
+         — Prices are intentionally left out for now.
+           When you're ready, uncomment the price line inside each card.
+         ============================================================ -->
+    <section class="section section--light">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Coaching Options</span>
           <h2>Find the right fit for your goals</h2>
           <hr class="divider" />
           <p>
-            I currently offer three coaching options depending on your experience
-            level and race goals. Not sure which is right for you?
-            <a href="contact.html">Just ask</a> — I'm happy to help you figure it out.
+            Not sure which option is right for you?
+            <a href="contact.html">Just ask</a> — I'll help you figure it out.
           </p>
         </div>
-      </div>
-    </section>
 
-    <!-- SERVICE CARDS -->
-    <section class="section section--light" style="padding-top: 0;">
-      <div class="container">
         <div class="three-col">
 
-          <!-- SERVICE 1 -->
+          <!-- OPTION 1: Beginner -->
           <div class="card">
             <div class="card-icon">🏃</div>
-            <h3>Beginner Runner Coaching</h3>
+            <h3>Beginner Runner</h3>
             <p>
-              Perfect for anyone who has never run before or is just getting back into it.
-              We'll build your base safely and make running feel sustainable from day one.
+              For anyone who has never run before or is just getting back into it.
+              We'll build your base safely and make running feel sustainable.
             </p>
-            <ul style="list-style: none; margin-top: var(--space-sm);">
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Personalized weekly training plan</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Walk-to-run progression</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Weekly check-in messages</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); color: var(--color-text-muted);">✓ Form tips and injury prevention basics</li>
+            <!-- Feature list — edit to match what you'll actually offer -->
+            <ul class="card-features">
+              <li>✅ Personalized weekly training plan</li>
+              <li>✅ Walk-to-run progression</li>
+              <li>✅ Weekly check-in messages</li>
+              <li>✅ Form tips and injury prevention basics</li>
             </ul>
-            <a href="contact.html" class="btn btn-outline-dark" style="margin-top: var(--space-md); width: 100%; display: block; text-align: center;">
-              Inquire About This
+            <!--
+              Uncomment when ready to show pricing:
+              <p style="margin-top:var(--space-md); font-weight:bold; font-size:var(--font-size-lg);">$[Price] / month</p>
+            -->
+            <a href="contact.html" class="btn btn-outline-dark btn--full" style="margin-top: var(--space-md);">
+              Inquire
             </a>
           </div>
 
-          <!-- SERVICE 2 (featured) -->
+          <!-- OPTION 2: 5K / 10K — highlighted as most popular -->
           <div class="card card--featured">
             <div class="card-icon">⚡</div>
-            <h3>5K / 10K Training</h3>
+            <h3>5K / 10K Coaching</h3>
             <p>
-              For runners with some base fitness who want to race shorter distances faster.
-              We'll work on speed, pacing strategy, and race-day preparation.
+              For runners with some base fitness who want to race shorter distances
+              faster. Speed, pacing strategy, and race-day preparation.
             </p>
-            <ul style="list-style: none; margin-top: var(--space-sm);">
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Goal-based training plan ([X]-week program)</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Speed and tempo workouts</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Race pace and strategy guidance</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Bi-weekly check-ins</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); color: var(--color-text-muted);">✓ Plan adjustments based on your feedback</li>
+            <ul class="card-features">
+              <li>✅ Goal-based plan ([X]-week program)</li>
+              <li>✅ Speed and tempo workouts</li>
+              <li>✅ Race pace and strategy guidance</li>
+              <li>✅ Bi-weekly check-ins</li>
+              <li>✅ Plan adjustments based on feedback</li>
             </ul>
-            <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-md); width: 100%; display: block; text-align: center;">
-              Inquire About This
+            <a href="contact.html" class="btn btn-primary btn--full" style="margin-top: var(--space-md);">
+              Inquire
             </a>
           </div>
 
-          <!-- SERVICE 3 -->
+          <!-- OPTION 3: Half / Full Marathon -->
           <div class="card">
             <div class="card-icon">🏅</div>
-            <h3>Half Marathon / Marathon Training</h3>
+            <h3>Half / Full Marathon</h3>
             <p>
-              For runners ready to take on a major race goal. Long, structured training
-              cycles with progressive mileage builds and full race-day preparation.
+              For runners ready to take on a major race goal. Structured long-haul
+              training with progressive mileage and full race preparation.
             </p>
-            <ul style="list-style: none; margin-top: var(--space-sm);">
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Full [12–20]-week training plan</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Long run structure and progression</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Fueling and hydration guidance</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); border-bottom: 1px solid var(--color-border); color: var(--color-text-muted);">✓ Weekly check-ins and feedback</li>
-              <li style="padding: 6px 0; font-size: var(--font-size-sm); color: var(--color-text-muted);">✓ Taper and race-week planning</li>
+            <ul class="card-features">
+              <li>✅ Full [12–20]-week training plan</li>
+              <li>✅ Long run structure and progression</li>
+              <li>✅ Fueling and hydration guidance</li>
+              <li>✅ Weekly check-ins and feedback</li>
+              <li>✅ Taper and race-week planning</li>
             </ul>
-            <a href="contact.html" class="btn btn-outline-dark" style="margin-top: var(--space-md); width: 100%; display: block; text-align: center;">
-              Inquire About This
+            <a href="contact.html" class="btn btn-outline-dark btn--full" style="margin-top: var(--space-md);">
+              Inquire
             </a>
           </div>
 
-        </div>
+        </div><!-- end .three-col -->
 
         <p class="text-center text-muted" style="margin-top: var(--space-lg); font-size: var(--font-size-sm);">
-          Pricing details will be discussed during our initial conversation.
-          All packages are customized to fit your specific needs and goals.
+          Pricing is discussed during our initial conversation.
+          All options are delivered entirely online.
         </p>
 
       </div>
-    </section>
+    </section><!-- end service cards section -->
 
-    <!-- MY COACHING APPROACH -->
+
+    <!-- ============================================================
+         WHAT TO EXPECT
+         — Clear, honest list of what athletes get
+         ============================================================ -->
     <section class="section">
       <div class="container">
 
         <div class="section-header">
-          <span class="section-label">How It Works</span>
-          <h2>My Coaching Approach</h2>
+          <span class="section-label">What You'll Get</span>
+          <h2>What working together looks like</h2>
           <hr class="divider" />
-          <p>Every athlete goes through the same simple process — starting with a conversation and ending with results.</p>
         </div>
 
+        <!-- Two columns of simple expectation blocks -->
         <div class="two-col">
 
           <div>
-            <div style="display: flex; gap: var(--space-md); margin-bottom: var(--space-lg); align-items: flex-start;">
-              <div style="min-width: 48px; height: 48px; border-radius: 50%; background-color: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: var(--font-size-lg); flex-shrink: 0;">1</div>
-              <div>
-                <h3>We talk first</h3>
-                <p style="color: var(--color-text-muted); margin: 0;">We start with a short conversation about your goals, current fitness, schedule, and what's worked or hasn't for you in the past.</p>
-              </div>
-            </div>
-            <div style="display: flex; gap: var(--space-md); align-items: flex-start;">
-              <div style="min-width: 48px; height: 48px; border-radius: 50%; background-color: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: var(--font-size-lg); flex-shrink: 0;">2</div>
-              <div>
-                <h3>I build your plan</h3>
-                <p style="color: var(--color-text-muted); margin: 0;">Based on our conversation, I create a training plan tailored to your goal, your available days, and your current fitness level.</p>
-              </div>
+            <h4 style="margin-bottom: 6px;">📅 A weekly training schedule</h4>
+            <p style="color: var(--color-text-muted); margin-bottom: var(--space-lg);">
+              Structured runs with a clear purpose each day — easy runs, workouts,
+              long runs, and rest. No guessing what to do.
+            </p>
+
+            <h4 style="margin-bottom: 6px;">💬 Regular communication</h4>
+            <p style="color: var(--color-text-muted); margin-bottom: var(--space-lg);">
+              You can always reach me with questions, run updates, or to flag
+              if something feels off or isn't working.
+            </p>
+
+            <h4 style="margin-bottom: 6px;">🔄 Plan adjustments</h4>
+            <p style="color: var(--color-text-muted);">
+              Life happens. If you miss a week, get sick, or feel beat up,
+              we adapt the plan. We don't just push through blindly.
+            </p>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: 6px;">📊 Progress over time</h4>
+            <p style="color: var(--color-text-muted); margin-bottom: var(--space-lg);">
+              We track your improvement week to week so you can see and feel
+              how far you've come since day one.
+            </p>
+
+            <h4 style="margin-bottom: 6px;">🧠 Education along the way</h4>
+            <p style="color: var(--color-text-muted); margin-bottom: var(--space-lg);">
+              I'll share the reasoning behind your training — pacing, easy effort,
+              fueling, and other fundamentals — so you become a smarter runner.
+            </p>
+
+            <h4 style="margin-bottom: 6px;">🎯 Honest feedback</h4>
+            <p style="color: var(--color-text-muted);">
+              I'll tell you what's working, what needs work, and how to keep
+              improving. No vague encouragement — real, useful input.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- end what to expect section -->
+
+
+    <!-- ---- CTA BANNER ---- -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Not sure where to start?</h2>
+        <p>
+          Just reach out. Tell me a little about your goals and we'll find
+          the right fit. No commitment required.
+        </p>
+        <a href="contact.html" class="btn btn-outline">Start a Conversation</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="assets/logo.png" alt="Michael Chambers Running Coaching" class="footer-logo-img" />
+          </a>
+          <p>Online running coaching for every level.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:[your@email.com]">[your@email.com]</a></li>
+            <li><a href="https://instagram.com/[YourHandle]" target="_blank" rel="noopener">@[YourHandle]</a></li>
+            <li><span>[Your City, State]</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Michael Chambers Running. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+</content>
+</file>
