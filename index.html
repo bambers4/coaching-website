@@ -27,14 +27,9 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
-      <span class="hero-eyebrow">Running Coach &bull; Sacramento, CA</span>
+      <span class="hero-eyebrow">Online Running Coaching &bull; Based in Sacramento, CA</span>
 
       <h1>Personalized running coaching to help you confidently achieve your goals.</h1>
-
-      <p class="hero-subtitle">
-        Whether you're new to the sport or a seasoned veteran,
-        I'm here to help you train smarter and enjoy the journey.
-      </p>
 
       <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
     </div>
@@ -42,7 +37,7 @@
 
   <main>
 
-    <!-- COACHING APPROACH SECTION -->
+    <!-- COACHING APPROACH + WHO I HELP — combined section -->
     <section class="section">
       <div class="container">
 
@@ -50,7 +45,6 @@
           <span class="section-label">My Coaching Philosophy</span>
           <h2>Coaching that fits your needs</h2>
           <hr class="divider" />
-
           <p>
             13+ years of competitive running has shown me that training isn't one-size-fits-all.
             I design your training plan by understanding where you are, where you want to go,
@@ -58,12 +52,12 @@
           </p>
         </div>
 
+        <!-- Three approach cards — unchanged from your original -->
         <div class="three-col">
 
           <div class="card">
             <div class="card-icon">🎯</div>
             <h3>Goal-Driven Plans</h3>
-
             <p>
               Every plan starts with your goal. We work backward from
               the finish line.
@@ -73,7 +67,6 @@
           <div class="card card--featured">
             <div class="card-icon">▪</div>
             <h3>Structured Training</h3>
-
             <p>
               Weekly plans that build progressively over a training block to help you be fit,
               healthy, and confident on the starting line.
@@ -83,20 +76,21 @@
           <div class="card">
             <div class="card-icon">💬</div>
             <h3>Ongoing Support</h3>
-
             <p>
               With me, you'll never train alone. Regular check-ins, feedback on your
               runs, and adjustments to your training schedule when life gets in the way.
             </p>
           </div>
 
-        </div>
-      </div>
-    </section>
+        </div><!-- end three-col -->
 
-    <!-- WHO I HELP SECTION -->
-    <section class="section section--light">
-      <div class="container">
+        <!-- WHO I WORK WITH — merged below the cards, same section -->
+        <!--
+          A thin horizontal rule separates the cards above from the
+          "who I work with" content below, keeping them visually
+          connected but distinct.
+        -->
+        <hr style="border: none; border-top: 1px solid var(--color-border); margin: var(--space-xl) 0;" />
 
         <div class="section-header">
           <span class="section-label">Who I Work With</span>
@@ -104,57 +98,32 @@
           <hr class="divider" />
         </div>
 
-        <div class="two-col">
+        <!-- Single centered column — no stat cards, just the text and bullet list -->
+        <div style="max-width: 640px; margin: 0 auto;">
 
-          <div>
-            <p>
-              I work with runners of all backgrounds and experience levels.
-              If you're motivated to improve and willing to put in the work,
-              we're a good fit.
-            </p>
+          <p>
+            I work with runners of all backgrounds and experience levels.
+            If you're motivated to improve and willing to put in the work,
+            we're a good fit.
+          </p>
 
-            <ul style="padding-left: 1.25rem; list-style: disc; color: var(--color-text-muted); line-height: 2;">
-              <li>Complete beginners who have never run before</li>
-              <li>Runners returning after a break or injury</li>
-              <li>5K and 10K racers chasing a personal best</li>
-              <li>First-time half marathon and marathon runners</li>
-              <li>High school or college athletes looking for structure</li>
-              <li>Anyone who wants to run consistently and feel good doing it</li>
-            </ul>
+          <ul style="padding-left: 1.25rem; list-style: disc; color: var(--color-text-muted); line-height: 2; margin-bottom: var(--space-lg);">
+            <li>Complete beginners who have never run before</li>
+            <li>Runners returning after a break or injury</li>
+            <li>5K and 10K racers chasing a personal best</li>
+            <li>First-time half marathon and marathon runners</li>
+            <li>High school or college athletes looking for structure</li>
+            <li>Anyone who wants to run consistently and feel good doing it</li>
+          </ul>
 
-            <a href="coaching.html" class="btn btn-outline-dark" style="margin-top: var(--space-md);">
-              See Coaching Options
-            </a>
-          </div>
+          <a href="coaching.html" class="btn btn-outline-dark">
+            See Coaching Options
+          </a>
 
-          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+        </div><!-- end centered column -->
 
-            <div class="card" style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: bold; color: var(--color-accent);">13</div>
-              <p style="margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm);">
-                Years running competitively
-              </p>
-            </div>
-
-            <div class="card" style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: bold; color: var(--color-accent);">[#]+</div>
-              <p style="margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm);">
-                Races completed
-              </p>
-            </div>
-
-            <div class="card" style="text-align: center;">
-              <div style="font-size: 2.5rem; font-weight: bold; color: var(--color-accent);">100%</div>
-              <p style="margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm);">
-                Committed to your progress
-              </p>
-            </div>
-
-          </div>
-
-        </div>
       </div>
-    </section>
+    </section><!-- end combined section -->
 
     <!-- ABOUT PREVIEW SECTION -->
     <section class="section section--dark">
@@ -184,11 +153,11 @@
           </div>
 
           <div style="text-align: center;">
-            <!-- Replace this div with an <img> tag when you have a photo -->
-            <div class="coach-photo-placeholder" style="max-width: 320px; margin: 0 auto; background-color: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.4);">
-              📷 Add your photo here<br /><br />
-              <small>Replace this block with an &lt;img&gt; tag</small>
-            </div>
+            <img
+              src="assets/coach-photo.jpg"
+              alt="Michael Chambers running coach"
+              class="coach-photo"
+            />
           </div>
 
         </div>
@@ -210,7 +179,6 @@
 
         <div class="footer-links">
           <h4>Pages</h4>
-
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -221,7 +189,6 @@
 
         <div class="footer-links">
           <h4>Get in Touch</h4>
-
           <ul>
             <li><a href="mailto:bmbinquiries1@gmail.com">bmbinquiries1@gmail.com</a></li>
             <li><a href="#">@michael.chambers_ (Instagram)</a></li>
